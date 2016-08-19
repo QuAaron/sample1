@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="controller1">
+
+<head>
+  <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular-route.min.js"></script>
+  <script data-require="angular.js@*" data-semver="1.3.5" src="https://code.angularjs.org/1.3.5/angular.js"></script>
+
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body class="form-group">
+  <h1>Temperature Monitor</h1>
+
+  <label class="" for="temperture">Add Temperture:</label>
+  <input class="form-control input-lg" ng-model="temparature" id="temparature">
+
+  <button class="btn-primary btn-sm" ng-click="recordTemperature()">Add</button>
+  <p id="errorMessage" class="alert-danger"></p>
+
+  <hr />
+  <section class="form-group" >
+    <button class="btn-primary" ng-click="getCurrentMedian()">Get Median Temperture</button>
+    <p>Current Median:</p>
+    <p id="currentMedian"></p>
+
+  </section>
+  <hr>
+  <hr>
+  <p class="alert-info">developer name: ---Chetan Munuswamy---</p>
+
+  <hr>
+  <a href="jasmine-test-runner.html">Run Unit Tests</a>
+</body>
+
+</html>
